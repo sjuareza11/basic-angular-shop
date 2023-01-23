@@ -1,0 +1,15 @@
+<div class="card my-4" *ngIf="product">
+  <a routerLink="/collection/{{product.category.id}}/products/{{ product.id }}">
+    <img [src]="product.images[0]" class="card-img-top" [width]="304" [height]="228" loading="lazy"
+      alt="{{product.title}}">
+  </a>
+  <div class="card-body">
+    <a class="text-decoration-none" routerLink="/collection/{{product.category.id}}/products/{{ product.id }}">
+      <h5 class="card-title">{{ product.title }}</h5>
+    </a>
+    <span class="card-subtitle">{{ (product.price | currency: 'EUR': 'symbol')}}</span>
+    <p class="card-text text-truncate"> {{product.description}}</p>
+    <a routerLink="/collection/{{product.category.id}}/products/{{ product.id }}" class="btn btn-dark">Ver
+      detalles</a>
+  </div>
+</div>

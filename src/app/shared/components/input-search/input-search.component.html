@@ -1,0 +1,15 @@
+<form>
+  <div class="row">
+    <div class="col">
+      <input class="form-control form-control-lg" [id]="idInput" type="text" [(ngModel)]="inputSearchField"
+        (keydown.enter)="submitChanges.emit(inputSearchField)" name="'input-search'"
+        placeholder="Introduce el nombre del producto" />
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-primary btn-lg " [ngClass]="{'disabled': inputSearchField.length === 0}"
+        [disabled]="inputSearchField.length === 0" (click)="submitChanges.emit(inputSearchField)" id="submitButton"
+        type="button">Buscar producto
+      </button>
+    </div>
+  </div>
+</form>

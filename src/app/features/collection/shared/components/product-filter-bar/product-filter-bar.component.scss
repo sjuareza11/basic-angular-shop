@@ -1,0 +1,45 @@
+app-product-filter-bar {
+  .product-filter-bar {
+    justify-content: center;
+  }
+
+  .dropdown-item {
+    padding: 0rem;
+  }
+
+  .dropdown-menu.show {
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .dropdown-toggle::after {
+    right: 5%;
+    position: absolute;
+    font-size: 19px;
+    top: 50%;
+  }
+
+  .input-group-text {
+    background-color: var(--bs-dark);
+    color: var(--bs-white);
+  }
+
+  .ngx-slider .ngx-slider-pointer {
+    background-color: var(--bs-dark);
+  }
+
+  .ngx-slider .ngx-slider-selection {
+    background-color: var(--bs-dark);
+  }
+
+  .ngx-slider .ngx-slider-active:after {
+    background-color: var(--bs-white) !important;
+
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .product-filter-bar {
+      justify-content: flex-start;
+    }
+  }
+}
